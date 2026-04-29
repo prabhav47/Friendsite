@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+button {
+  padding: 12px 25px;
+  margin-top: 20px;
+  border: none;
+  background: white;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SECTION 1 -->
+<div class="section">
+  <h1>Hey :)</h1>
+  <p>Don’t scroll too fast</p>
+  <button onclick="showSection(1)">Proceed</button>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section hidden" id="s1">
+  <h2>So you actually clicked...</h2>
+  <p>Not surprising. You're always curious.</p>
+  <button onclick="showSection(2)">Continue</button>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section hidden" id="s2">
+  <h2>Top 5 reasons you're annoying:</h2>
+  <p>1. You overthink everything</p>
+  <p>2. You never listen</p>
+  <p>3. You disappear randomly</p>
+  <p>4. You act strong but you're soft</p>
+  <p>5. You became important to me</p>
+  <button onclick="showSection(3)">One more thing</button>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section hidden" id="s3">
+  <h2>We’ve had chaos...</h2>
+  <p>Random talks. Stupid fights.</p>
+  <p>But somehow you stayed.</p>
+  <button onclick="showSection(4)">Final message</button>
+</div>
+
+<!-- FINAL -->
+<div class="section hidden" id="s4">
+  <h1>Happy Friendship Anniversary ❤️</h1>
+  <p>You genuinely matter to me.</p>
+  <p>I hope one thing stays constant — us.</p>
+  <p>You’re stuck with me now :)</p>
+</div>
+
+<script>
+function showSection(n) {
+  document.getElementById("s" + (n-1)).style.display = "none";
+  document.getElementById("s" + n).style.display = "flex";
+}
+</script>
+
+</body>
+</html>
